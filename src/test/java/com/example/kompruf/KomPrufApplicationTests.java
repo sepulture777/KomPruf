@@ -24,9 +24,6 @@ class KomPrufApplicationTests {
                 .andExpect(status().isOk());
     }
 
-    @Test
-    void isTheBMIcalculatedCorrectly() throws Exception {
 
-    }
 
 }
