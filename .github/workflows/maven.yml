@@ -10,9 +10,9 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ "master" ] #this is the action for the master branch 
+    branches: [ "Test" ] #this is the action for the test branch 
   pull_request:
-    branches: [ "master" ]
+    branches: [ "Test" ]
 
 jobs:
   build:
@@ -29,5 +29,13 @@ jobs:
         cache: maven
     - name: Build with Maven    #here we build our pushed code as a maven project using our pom.xml
       run: mvn -B package --file pom.xml
+      
+    - name: Test Reporter #we add a test to our test branch to see if they pass or not
+      uses: dorny/test-reporter@v1.6.0
+      if: success() || failure()
+      with:
+        name: unit-tests
+        path: target/surefire-reports/TEST-*.xml
+        reporter: java-junit
 
  
