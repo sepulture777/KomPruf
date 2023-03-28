@@ -30,6 +30,15 @@ jobs:
     - name: Build with Maven    #here we build our pushed code as a maven project using our pom.xml
       run: mvn -B package --file pom.xml
       
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3.1.0
+      with:
+        # Artifact name
+        name: deploy
+        # A file, directory or wildcard pattern that describes what to upload
+        path: target/*.jar
+        # The desired behavior if no files are found using the provided path.
+      
     - name: Test Reporter #we add a test to our test branch to see if they pass or not
       uses: dorny/test-reporter@v1.6.0
       if: success() || failure()
