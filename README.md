@@ -10,3 +10,5 @@ Our first Todo moves to the in progress Column and and an assignee is assigned, 
 
 ![grafik](https://user-images.githubusercontent.com/30460028/228293492-49f29313-e307-4f6a-8527-cf9f1856bdc1.png)
 
+An action is generated it should make a CI/CD pipeline.
+A template is used and slightly modified.
