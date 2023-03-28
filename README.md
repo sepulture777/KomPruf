@@ -32,3 +32,14 @@ and the test passes
 our first task is done and two to follow
 
 ![grafik](https://user-images.githubusercontent.com/30460028/228308106-b86a53ca-3db6-4bae-9906-8bf7de4f4c4c.png)
+
+
+we have implemented two user stories but due to a wrong test strategy we couldnt automatically pass the tests
+
+![grafik](https://user-images.githubusercontent.com/30460028/228317295-ef688ed6-dbec-4c51-9216-7a76d2b221ff.png)
+
+
+
+
+finally we merge all together in the master branch
+
