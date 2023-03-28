@@ -24,6 +24,14 @@ class KomPrufApplicationTests {
                 .andExpect(status().isOk());
     }
 
-
+    @Test
+    void isTheBMIcalculatedCorrectly() throws Exception {
+        double weight = 85;
+        double height = 1.70;
+        double bmi = weight/(height*height);
+        mvc.perform(MockMvcRequestBuilders.get("/bmi?weight=85&height=1.70")
+                        .accept(MediaType.APPLICATION_JSON))
+                        .equals(bmi);
+    }
 
 }
