@@ -22,6 +22,10 @@ class KomPrufApplicationTests {
         mvc.perform(MockMvcRequestBuilders.get("/")
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
+    }
+
+    @Test
+    void isTheBMIcalculatedCorrectly() throws Exception {
 
     }
 

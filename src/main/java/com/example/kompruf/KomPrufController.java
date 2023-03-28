@@ -9,4 +9,6 @@ public class KomPrufController {
     @GetMapping("/")    //we generate a mapping to cause a Http200 response
     public void beAvailable(){
     }
+
+
 }
